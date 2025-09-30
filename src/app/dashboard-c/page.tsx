@@ -2,8 +2,8 @@
 import { useUser } from '@clerk/nextjs'
 import React from 'react'
 
-export default function page() {
-  const { isSignedIn, user, isLoaded } = useUser()
+export default function Page() {
+  const { isSignedIn, isLoaded } = useUser()
 
   if (!isLoaded) {
     return <div>로딩중........</div>
