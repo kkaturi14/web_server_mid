@@ -16,7 +16,7 @@ export default async function ReposPage() {
   )
   await new Promise((resolve) => setTimeout(resolve, 1000))
   const repos = await response.json()
-  console.log(repos)
+  //console.log(repos)
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">
