@@ -2,7 +2,7 @@ import { Repository } from '@/types/repo'
 import Link from 'next/link'
 import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa'
 
-const username = 'Min'
+const username = 'kkaturi14'
 const token = process.env.GITHUB_TOKEN
 
 export default async function ReposPage() {
