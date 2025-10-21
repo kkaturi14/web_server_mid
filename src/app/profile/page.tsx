@@ -177,12 +177,9 @@ export default function ProfilePage() {
           fontWeight: '700', 
           color: '#ffffff', 
           marginBottom: '1.5rem',
-          fontFamily: 'inherit',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.5rem'
+          fontFamily: 'inherit'
         }}>
-          <span style={{ fontSize: '1.5rem' }}>🛡️</span> 보안 관련 활동
+          보안 관련 활동
         </h2>
         <ul style={{ 
           listStyle: 'none',
@@ -214,6 +211,57 @@ export default function ProfilePage() {
             • 화이트햇 스쿨 3기 수료 (2025.03~09)
           </li>
         </ul>
+      </div>
+
+      {/* Tech Stacks Section */}
+      <div style={{
+        background: 'rgba(255, 255, 255, 0.08)',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        padding: '2rem',
+        borderRadius: '1rem',
+        marginBottom: '2rem'
+      }}>
+        <h2 style={{ 
+          fontSize: '1.5rem', 
+          fontWeight: '700', 
+          color: '#ffffff', 
+          marginBottom: '1.5rem',
+          fontFamily: 'inherit'
+        }}>
+          Tech Stacks
+        </h2>
+        <div style={{ 
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '0.75rem'
+        }}>
+          {['AWS', 'Python', 'PHP', 'MySQL', 'MongoDB', 'Docker', 'JSP'].map((tech) => (
+            <div
+              key={tech}
+              style={{
+                padding: '0.75rem 1.25rem',
+                background: 'rgba(99, 102, 241, 0.15)',
+                border: '1px solid rgba(99, 102, 241, 0.4)',
+                borderRadius: '0.5rem',
+                color: '#e4e4e7',
+                fontSize: '0.938rem',
+                fontWeight: '600',
+                fontFamily: 'inherit',
+                transition: 'all 0.3s'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = 'rgba(99, 102, 241, 0.25)'
+                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.6)'
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = 'rgba(99, 102, 241, 0.15)'
+                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.4)'
+              }}
+            >
+              {tech}
+            </div>
+          ))}
+        </div>
       </div>
 
       <Link href="/" className="back-btn">
