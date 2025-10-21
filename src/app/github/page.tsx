@@ -52,7 +52,8 @@ export default function ReposPage() {
         color: '#ffffff', 
         marginBottom: '1rem',
         letterSpacing: '-0.03em',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        textAlign: 'center'
       }}>
         GitHub Repositories
       </h1>
@@ -60,7 +61,8 @@ export default function ReposPage() {
         fontSize: '1.125rem', 
         color: '#a1a1aa', 
         marginBottom: '3rem',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        textAlign: 'center'
       }}>
         My repositories
       </p>

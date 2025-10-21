@@ -17,7 +17,8 @@ export default function ProfilePage() {
         color: '#ffffff', 
         marginBottom: '1rem',
         letterSpacing: '-0.03em',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        textAlign: 'center'
       }}>
         Profile
       </h1>
@@ -25,7 +26,8 @@ export default function ProfilePage() {
         fontSize: '1.125rem', 
         color: '#a1a1aa', 
         marginBottom: '3rem',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        textAlign: 'center'
       }}>
         My profile
       </p>

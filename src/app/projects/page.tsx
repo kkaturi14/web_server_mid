@@ -3,6 +3,14 @@
 import Link from 'next/link'
 
 export default function ProjectsPage() {
+  const teamMembers = [
+    { name: '곽민경', image: '/profile.jpg', link: 'https://web-server-mid.vercel.app/' },
+    { name: '박혜수', image: '/pandyo.png', link: 'https://web-server-class-project-01.vercel.app/' },
+    { name: '심재훈', image: '/sim.png', link: 'https://midterm-portfolio-two.vercel.app/' },
+    { name: '정윤서', image: '/puppy.jpg', link: 'https://wsvbp1-ixms.vercel.app/' },
+    { name: '정재성', image: '/duck.jpg', link: 'https://20252-middle.vercel.app/' }
+  ]
+
   return (
     <div style={{ 
       maxWidth: '1000px', 
@@ -17,7 +25,8 @@ export default function ProjectsPage() {
         color: '#ffffff', 
         marginBottom: '1rem',
         letterSpacing: '-0.03em',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        textAlign: 'center'
       }}>
         Projects
       </h1>
@@ -25,7 +34,8 @@ export default function ProjectsPage() {
         fontSize: '1.125rem', 
         color: '#a1a1aa', 
         marginBottom: '3rem',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        textAlign: 'center'
       }}>
         My projects
       </p>
@@ -134,7 +144,7 @@ export default function ProjectsPage() {
         border: '1px solid rgba(255, 255, 255, 0.15)',
         padding: '2rem',
         borderRadius: '1rem',
-        marginBottom: '2rem',
+        marginBottom: '3rem',
         transition: 'all 0.3s'
       }}>
         <div style={{
@@ -175,6 +185,93 @@ export default function ProjectsPage() {
         }}>
           모의해킹 실습을 위한 웹사이트를 제작하여, 다양한 보안 취약점을 학습하고 실습할 수 있는 환경을 구축했습니다.
         </p>
+      </div>
+
+      {/* TEAM Section */}
+      <div style={{ marginBottom: '3rem' }}>
+        <h2 style={{
+          fontSize: '2.5rem',
+          fontWeight: '800',
+          color: '#ffffff',
+          marginBottom: '2rem',
+          letterSpacing: '-0.03em',
+          fontFamily: 'inherit',
+          textAlign: 'center'
+        }}>
+          TEAM
+        </h2>
+
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: '2rem',
+          maxWidth: '1000px',
+          margin: '0 auto'
+        }}>
+          {teamMembers.map((member) => (
+            <a
+              key={member.name}
+              href={member.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.15)',
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                textDecoration: 'none',
+                transition: 'all 0.3s',
+                width: '160px'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)'
+                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.5)'
+                e.currentTarget.style.transform = 'translateY(-4px)'
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              <div style={{
+                width: '120px',
+                height: '120px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                marginBottom: '1rem',
+                border: '3px solid rgba(99, 102, 241, 0.3)',
+                background: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </div>
+              <h3 style={{
+                fontSize: '1.125rem',
+                fontWeight: '700',
+                color: '#ffffff',
+                fontFamily: 'inherit',
+                textAlign: 'center'
+              }}>
+                {member.name}
+              </h3>
+            </a>
+          ))}
+        </div>
       </div>
 
       <Link href="/" className="back-btn">
