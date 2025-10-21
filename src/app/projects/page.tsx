@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export default function ProjectsPage() {
   const teamMembers = [
-    { name: '곽민경', image: '/profile.jpg', link: 'https://web-server-mid.vercel.app/' },
-    { name: '박혜수', image: '/pandyo.png', link: 'https://web-server-class-project-01.vercel.app/' },
-    { name: '심재훈', image: '/sim.png', link: 'https://midterm-portfolio-two.vercel.app/' },
-    { name: '정윤서', image: '/puppy.jpg', link: 'https://wsvbp1-ixms.vercel.app/' },
-    { name: '정재성', image: '/duck.jpg', link: 'https://20252-middle.vercel.app/' }
+    { name: '곽민경', role: 'PA', image: '/profile.jpg', portfolioLink: 'https://web-server-mid.vercel.app/', githubLink: 'https://github.com/kkaturi14' },
+    { name: '박혜수', role: 'PA', image: '/pandyo.png', portfolioLink: 'https://web-server-class-project-01.vercel.app/', githubLink: 'https://github.com/Pandyo' },
+    { name: '심재훈', role: 'PA', image: '/sim.png', portfolioLink: 'https://midterm-portfolio-two.vercel.app/', githubLink: 'https://github.com/J4EH00N' },
+    { name: '정윤서', role: 'PA', image: '/puppy.jpg', portfolioLink: 'https://wsvbp1-ixms.vercel.app/', githubLink: 'https://github.com/oesp91' },
+    { name: '정재성', role: 'PM', image: '/duck.jpg', portfolioLink: 'https://20252-middle.vercel.app/', githubLink: 'https://github.com/Interludeal' }
   ]
 
   return (
@@ -207,11 +207,8 @@ export default function ProjectsPage() {
           margin: '0 auto'
         }}>
           {teamMembers.map((member) => (
-            <a
+            <div
               key={member.name}
-              href={member.link}
-              target="_blank"
-              rel="noopener noreferrer"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -220,19 +217,8 @@ export default function ProjectsPage() {
                 border: '1px solid rgba(255, 255, 255, 0.15)',
                 padding: '1.5rem',
                 borderRadius: '1rem',
-                textDecoration: 'none',
                 transition: 'all 0.3s',
-                width: '160px'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)'
-                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.5)'
-                e.currentTarget.style.transform = 'translateY(-4px)'
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
-                e.currentTarget.style.transform = 'translateY(0)'
+                width: '180px'
               }}
             >
               <div style={{
@@ -262,11 +248,75 @@ export default function ProjectsPage() {
                 fontWeight: '700',
                 color: '#ffffff',
                 fontFamily: 'inherit',
-                textAlign: 'center'
+                textAlign: 'center',
+                marginBottom: '1rem'
               }}>
-                {member.name}
+                {member.name} <span style={{ color: '#a1a1aa', fontWeight: '500' }}>({member.role})</span>
               </h3>
-            </a>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.5rem',
+                width: '100%'
+              }}>
+                <a
+                  href={member.portfolioLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: '0.5rem 1rem',
+                    background: 'rgba(99, 102, 241, 0.2)',
+                    border: '1px solid rgba(99, 102, 241, 0.4)',
+                    borderRadius: '0.5rem',
+                    color: '#a5b4fc',
+                    fontSize: '0.875rem',
+                    fontWeight: '600',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    transition: 'all 0.3s',
+                    fontFamily: 'inherit'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = 'rgba(99, 102, 241, 0.3)'
+                    e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.6)'
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = 'rgba(99, 102, 241, 0.2)'
+                    e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.4)'
+                  }}
+                >
+                  Portfolio
+                </a>
+                <a
+                  href={member.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: '0.5rem 1rem',
+                    background: 'rgba(139, 92, 246, 0.2)',
+                    border: '1px solid rgba(139, 92, 246, 0.4)',
+                    borderRadius: '0.5rem',
+                    color: '#c4b5fd',
+                    fontSize: '0.875rem',
+                    fontWeight: '600',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    transition: 'all 0.3s',
+                    fontFamily: 'inherit'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = 'rgba(139, 92, 246, 0.3)'
+                    e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.6)'
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)'
+                    e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.4)'
+                  }}
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </div>
