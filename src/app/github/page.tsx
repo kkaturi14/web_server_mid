@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
-const username = 'kkaturi14'
-
 export default function ReposPage() {
   const [repos, setRepos] = useState<Repository[]>([])
   const [loading, setLoading] = useState(true)

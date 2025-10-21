@@ -11,14 +11,13 @@ export async function GET() {
         headers: {
           Authorization: `token ${token}`,
         },
-        next: { revalidate: 60 } // Cache for 1 minute
+        next: { revalidate: 60 }
       }
     )
     
     const data = await response.json()
     return NextResponse.json(data)
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to fetch repos' }, { status: 500 })
   }
 }
-
