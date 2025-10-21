@@ -5,6 +5,7 @@ export interface Repository {
   stargazers_count: number
   forks_count: number
   watchers_count: number
+  html_url: string
   visibility: 'public' | 'private'
   owner: {
     login: string
