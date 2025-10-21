@@ -138,6 +138,28 @@ export default function ProfilePage() {
               <p style={{ color: '#a1a1aa', fontSize: '0.875rem', marginBottom: '0.25rem', fontWeight: '500' }}>MBTI</p>
               <p style={{ color: '#ffffff', fontSize: '1rem', fontWeight: '600' }}>ISFP/ISTP</p>
             </div>
+            <div style={{ gridColumn: '1 / -1' }}>
+              <p style={{ color: '#a1a1aa', fontSize: '0.875rem', marginBottom: '0.25rem', fontWeight: '500' }}>GitHub</p>
+              <a 
+                href="https://github.com/kkaturi14" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ 
+                  color: '#6366f1', 
+                  fontSize: '1rem', 
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  transition: 'color 0.3s'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.color = '#818cf8'}
+                onMouseOut={(e) => e.currentTarget.style.color = '#6366f1'}
+              >
+                github.com/kkaturi14 →
+              </a>
+            </div>
           </div>
         </div>
       </div>
