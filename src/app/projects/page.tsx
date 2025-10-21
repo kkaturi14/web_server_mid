@@ -55,7 +55,6 @@ export default function ProjectsPage() {
           gap: '0.75rem',
           marginBottom: '1rem'
         }}>
-          <span style={{ fontSize: '2rem' }}>🔒</span>
           <h2 style={{ 
             fontSize: '1.5rem', 
             fontWeight: '700', 
@@ -104,7 +103,6 @@ export default function ProjectsPage() {
           gap: '0.75rem',
           marginBottom: '1rem'
         }}>
-          <span style={{ fontSize: '2rem' }}>⚙️</span>
           <h2 style={{ 
             fontSize: '1.5rem', 
             fontWeight: '700', 
@@ -153,7 +151,6 @@ export default function ProjectsPage() {
           gap: '0.75rem',
           marginBottom: '1rem'
         }}>
-          <span style={{ fontSize: '2rem' }}>🎯</span>
           <h2 style={{ 
             fontSize: '1.5rem', 
             fontWeight: '700', 
