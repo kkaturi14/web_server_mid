@@ -65,12 +65,8 @@ export default function PracticePage() {
         </div>
 
         <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.75rem',
           marginBottom: '1rem'
         }}>
-          <span style={{ fontSize: '2rem' }}>🔐</span>
           <h2 style={{ 
             fontSize: '1.5rem', 
             fontWeight: '700', 
